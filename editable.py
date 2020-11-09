@@ -11,6 +11,10 @@ from pathlib import Path # For verifying the file
 # The extraction function
 def extract(filename):
 	book_file = input('Enter the name of the file: ')
+	# Creating output folders 
+	dirs = os.path.join(os.getcwd(), 'out', 'output.txt')
+	if not Path(dirs).is_dir():
+		os.makedirs(dirs)
 	if Path(f'./{book_file}').is_file():
 	    # Using the with-as syntax eliminates the need to close the file object manually and is safer
 	    with open(book_file, 'a') as book:
