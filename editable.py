@@ -31,6 +31,3 @@ def extract(filename):
 			f.write(text)
 		# Close the file
 		f.close()
-
-
-	

@@ -3,7 +3,7 @@
 # The images must temporarily be stored in "./out/imgs/", and deleted after being processed.
 
 # Imports
-import pyTesseract 
+import pytesseract  
 
 # The extraction function
 def extract(filename):
@@ -15,16 +15,9 @@ def extract(filename):
 	# Open the file
 	with open(filename, 'rb') as f:
 		# Extract text
-		pdfReader=pyTesseract.image_to_string(f)
+		pdfReader=pytesseract.image_to_string(f)
 		# Save text to file
 		with open('out/output.txt', 'w') as f:
 			f.write(pdfReader)
 		# Close the file
 		f.close()
-
-
-
-
-
-
-
