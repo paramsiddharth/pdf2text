@@ -3,8 +3,34 @@
 # The images must temporarily be stored in "./out/imgs/", and deleted after being processed.
 
 # Imports
-# TODO
+import PyPDF2
 
 # The extraction function
 def extract(filename):
-	... # TODO
+	# TODO
+	# Open the file
+	# Extract text
+	# Save text to file
+	# Close the file
+	# Open the file
+	with open(filename, 'rb') as f:
+		# Extract text
+		pdfReader = PyPDF2.PdfFileReader(f)
+		num_pages = pdfReader.numPages
+		count = 0
+		text = ""
+		#The while loop will read each page
+		while count < num_pages:
+			pageObj = pdfReader.getPage(count)
+			count +=1
+			text += pageObj.extractText()
+		# Save text to file
+		with open('out/output.txt', 'w') as f:
+			f.write(text)
+		# Close the file
+		f.close()
+
+
+		
+
+
