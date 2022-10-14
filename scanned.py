@@ -3,7 +3,7 @@
 # The images must temporarily be stored in "./out/imgs/", and deleted after being processed.
 
 # Imports
-import PyPDF2
+import pyTesseract 
 
 # The extraction function
 def extract(filename):
@@ -15,22 +15,16 @@ def extract(filename):
 	# Open the file
 	with open(filename, 'rb') as f:
 		# Extract text
-		pdfReader = PyPDF2.PdfFileReader(f)
-		num_pages = pdfReader.numPages
-		count = 0
-		text = ""
-		#The while loop will read each page
-		while count < num_pages:
-			pageObj = pdfReader.getPage(count)
-			count +=1
-			text += pageObj.extractText()
+		pdfReader=pyTesseract.image_to_string(f)
 		# Save text to file
 		with open('out/output.txt', 'w') as f:
-			f.write(text)
+			f.write(pdfReader)
 		# Close the file
 		f.close()
 
 
-		
+
+
+
 
 

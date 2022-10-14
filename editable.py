@@ -2,7 +2,7 @@
 # The function must save the output to "./out/output.txt".
 
 # Imports
-# TODO
+import PyPDF2
 
 # The extraction function 
 #extract the files from input dictionary and save them to output dictionary
