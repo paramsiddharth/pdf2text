@@ -29,4 +29,4 @@ python main.py
 - [Tesseract PDF OCR](https://github.com/Manvendra2000/Reader) : A simple application that reads a PDF file and parses the text using the Tesseract OCR. _– [Manvendra](https://github.com/Manvendra2000), [Param](http://www.paramsid.com/)._
 - [PDF File Reader](https://github.com/HarshMarolia/Pdf-File-Reader) : A simple Python application that reads out textual PDF files. _– [Harsh](https://github.com/HarshMarolia), [Param](http://www.paramsid.com/)._
 
-### Made with ❤ by [Manvendra](https://github.com/Manvendra2000), [Harsh](https://github.com/HarshMarolia), and [Param](http://www.paramsid.com/).
+### Made with ❤ by [Manvendra](https://github.com/Manvendra2000), [Harsh](https://github.com/HarshMarolia), [Param](http://www.paramsid.com/), and [Medha](https://github.com/tmedha).
