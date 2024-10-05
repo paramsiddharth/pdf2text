@@ -14,6 +14,24 @@ python main.py
   ```
   `sudo` might be required for allowing the modification of the PATH environment variable.
 - [Tesseract](https://github.com/tesseract-ocr/tesseract) must be installed and added to PATH for text recognition. It can be downloaded and installed [here](https://github.com/tesseract-ocr/tesseract/releases).
+
+  If it isn't in the PATH
+  environment variable, add it, or set/export TESSERACT_CMD
+  as the location of the Tesseract executable binary.
+  E. g.
+  - Bash
+    ``` bash
+    export TESSERACT_CMD='/path/to/tesseract'
+    ```
+  - PowerShell
+    ``` powershell
+    $Env:Tesseract_Cmd = 'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    ```
+  - Windows Command Prompt
+    ``` cmd
+    set "TESSERACT_CMD=C:\Program Files\Tesseract-OCR\tesseract.exe"
+    ```
+
 - [Poppler](https://poppler.freedesktop.org/) must be installed and added to PATH for text recognition to work. Below are instructions for various operating systems.
   - Windows users can download and install it [here](https://blog.alivate.com.au/poppler-windows/).
   - MacOS users can install it using Homebrew.
