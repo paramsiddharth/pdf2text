@@ -9,6 +9,7 @@ def main():
 	# Imports
 	from editable import extract as extract_editable # Extract editable_text
 	from scanned import extract as extract_scanned # Extract scanned text
+	from reader import text_to_speech
 
 	# Create output folders if they don't exist
 	dirs = os.path.join(os.getcwd(), 'out', 'imgs')
@@ -62,6 +63,13 @@ def main():
 	else:
 		# Use OCR to parse text
 		extract_scanned(file_name)
+	
+	choice_next = input('''Do you want your PDF to be read to you? 
+1. Yes
+2. No
+''')
+	if choice_next == '1':
+		text_to_speech()
 
 if __name__ == '__main__':
 	try:
